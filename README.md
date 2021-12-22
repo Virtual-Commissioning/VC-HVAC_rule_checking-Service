@@ -1,10 +1,10 @@
-# VC-HVAC_rule_checker-Service
+# VC-HVAC_rule_checking-Service
 
 ## How to run development server
 
 To run the development server, clone this repository to the desired location.
 
-**Run below code in VC-HVAC_rule_checker-Service repo**
+**Run below code in VC-HVAC_rule_checking-Service repo**
 
 **Step 1:**
 Create a virtual environment:
