@@ -12,6 +12,9 @@ def has_in_and_out_connector(component):
     has_supplies_fluid_to = False
 
     for connector in connectors:
+        
+        if connector == "None":
+            return False
 
         if connector["ConnectorType"] == "suppliesFluidTo":
             has_supplies_fluid_to = True

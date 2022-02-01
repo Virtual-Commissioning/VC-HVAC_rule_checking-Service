@@ -171,9 +171,18 @@ def check_cooling_components(data):
 
 def rule_checker(data):
     data = json.loads(data)
-    ventilation_components_status = check_ventilation_components(data)
-    heating_components_status = check_heating_components(data)
-    cooling_components_status = check_cooling_components(data)
+    ventilation_components_status = []
+    heating_components_status = []
+    cooling_components_status = []
+
+    if "ventilation" in data["system"]["SubSystems"].keys():
+        ventilation_components_status = check_ventilation_components(data)
+
+    if "heating" in data["system"]["SubSystems"].keys():
+        heating_components_status = check_heating_components(data)
+    
+    if "cooling" in data["system"]["SubSystems"].keys():
+        cooling_components_status = check_cooling_components(data)
 
     status_json = ventilation_components_status + heating_components_status + cooling_components_status
 
