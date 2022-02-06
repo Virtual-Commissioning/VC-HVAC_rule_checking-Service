@@ -36,6 +36,9 @@ def check_ventilation_components(data):
         elif component_type == "Reduction":
             status_json = check_reduction(ventilation_component)
             
+        elif component_type == "Cap":
+            status_json = check_cap(ventilation_component)
+
         elif component_type == "Cross":
             status_json = check_cross(ventilation_component)
                     

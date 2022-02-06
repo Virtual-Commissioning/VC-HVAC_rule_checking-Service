@@ -139,6 +139,18 @@ def check_reduction(reduction):
     return correct_component(reduction)
 
 
+def check_cap(cap):
+    connectors = cap["ConnectedWith"]
+
+    if len(connectors) != 2:
+        return faulty_component(cap)
+    
+    if has_in_and_out_connector(cap):
+        return faulty_component(cap)
+    
+    return correct_component(cap)
+
+
 def check_cross(cross):
     connectors = cross["ConnectedWith"]
 
